@@ -1,0 +1,39 @@
+LD NUEVO: INDIRECTO POR REGISTRO
+
+ADDi R2, R0, 20
+LD R15, 19
+ADDi R10, R0, 0
+	
+bucle:              			
+beq r15, r0, salir			
+LD R3, R2
+ADD R10, R10, R3
+
+ADDi R2, R2, 1						
+ADDi r15, r15, -1 				
+j bucle 							
+salir: 		
+
+
+
+
+*ALTERNATIVA
+LD NUEVO: DIRECTO RELATIVO CON REGISTRO EXPLÍCITO
+
+ADDi R2, R0, 0
+LD R15, 19
+ADDi R10, R0, 0
+	
+bucle:              			
+beq r15, r0, salir			
+LD R1, R2, 20
+ADD R10, R10, R1
+
+ADDi R2, R2, 1						
+ADDi r15, r15, -1 				
+j bucle 							
+salir: 	
+
+
+
+					 
